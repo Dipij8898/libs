@@ -1,3 +1,6 @@
+<?php
+include "connection.php";
+?>
 
 <!DOCTYPE html>
 <html lang=en>
@@ -9,7 +12,7 @@
     <title>Libs - library management system</title>
     <link rel=stylesheet href=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css> <link rel=stylesheet
         href=../../assets/libs/%40fortawesome/fontawesome-free/css/all.min.css> <link rel=stylesheet
-        href="/assets/css/style.css" id=stylesheet>
+        href="style.css" id=stylesheet>
 </head>
 
 <body>
@@ -31,18 +34,19 @@
                         </button>
                     </div>
                     <ul class="navbar-nav ml-lg-auto">
+                        
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/index.html">Home </a></li>
+                                href="index.php">Home </a></li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/books.html">Books</a></li>
+                                href="books.php">Books</a></li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/record.html">Record</a>
+                                href="record.html">Record</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/feedback.html">Feedback</a>
+                                href="feedback.php">Feedback</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/admin.html">Admin</a></li>
+                                href="admin.php">Admin</a></li>
                     </ul>
                     <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
@@ -51,14 +55,14 @@
                             <div class="dropdown-menu dropdown-menu-md p-0">
                                 <ul class="list-group list-group-flush px-lg-4">
                                     <li class="dropdown dropdown-animate">
-                                        <a href="/pages/a_login.html" class="list-group-item " role=button>
+                                        <a href="a_login.php" class="list-group-item " role=button>
                                             <div class=ml-3>
                                                 <h6 class="heading mb-0">Login as admin</h6>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="dropdown dropdown-animate">
-                                        <a href="/pages/s_login.html" class="list-group-item " role=button>
+                                        <a href="s_login.php" class="list-group-item " role=button>
                                             <div class=ml-3>
                                                 <h6 class="heading mb-0">Login as student</h6>
                                             </div>
@@ -119,114 +123,94 @@
             </div>
         </nav>
     </header>
-<section class="slice py-5">
-    <div class="container">
-        <div class="row row-grid align-items-center">
-            <div class="col-12 col-md-5 col-lg-6 order-md-2">
-                <figure class=w-100><img alt="Image placeholder"
-                        src="/assets/img/svg/illustrations/illustration-2.svg" class="img-fluid mw-md-120">
-                </figure>
-            </div>
-            <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
-                <h1 class="text-center text-md-left mb-3"><b>Hello</b> <br>Can't find the book you wanted ? <br> <strong
-                        class=text-primary>Put a request now.</strong></h1>
-                <p class="lead text-center text-md-left text-muted">If you want us to add any specific book to our
-                    library you can put a request for that book.
-                </p>
-                <div class="text-center text-md-left mt-5"><a href="/pages/req.html"
-                        class="btn btn-secondary btn-icon"><span class=btn-inner--text>Request Now</span><span
-                        class=btn-inner--icon><i data-feather=arrow-right></i></span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="slice slice-lg bg-section-dark pt-5 pt-lg-8">
-    <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
-        <svg width=2560px height=100px xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink
-            preserveAspectRatio=none x=0px y=0px viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100"
-            xml:space=preserve class="">
-            <polygon points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-    </div>
-    <div class="container position-relative zindex-100">
-        <div class=col>
-            <div class="row justify-content-center">
-                <div class="col-md-10 text-center">
-                    <div class="mt-4 mb-6">
-                        <h2 class="h1 text-white">Haven't subscribed yet ?</h2>
-                        <h4 class="text-white mt-3">Check our plans now... </h4>
+    <section class="slice slice-lg py-7 py-lg-8 bg-cover bg-size--cover"
+        style="background-image:url(/assets/img/backgrounds/p3.jpg)"> <span
+            class="mask bg-dark opacity-9"></span>
+        <div data-offset-top=#navbar-main>
+            <div class="container pt-xl-4">
+                <div class="row justify-content-center">
+                    <div class=col-lg-9>
+                        <h2 class="mb-4 text-center text-white">Enter name of the book</h2>
+                        <form>
+                            <div class="form-group bg-neutral rounded-pill mb-0 px-2 py-2 shadow">
+                                <div class=row>
+                                    <div class=col>
+                                        <div class="input-group input-group-merge shadow-none">
+                                            <div class=input-group-prepend><span
+                                                    class="input-group-text bg-transparent"><i
+                                                        data-feather=search></i></span></div>
+                                            <input type=text class="form-control form-control-flush shadow-none"
+                                                placeholder="Search for the books">
+                                        </div>
+                                    </div>
+                                    <div class=col-auto><button type=button
+                                            class="btn btn-block btn-warning rounded-pill">Search</button></div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="slice pt-0">
-    <div class="container position-relative zindex-100">
-        <div class=row>
-            <div class="col-xl-4 col-sm-6 mt-n7">
-                <div class="card card-pricing bg-soft-primary text-center px-3 shadow hover-scale-110">
-                    <div class="card-header py-5    border-0 delimiter-bottom">
-                        <div class="h1 text-center mb-0">&#8377 <span class="price font-weight-bolder">200</span>
+        <div class="shape-container shape-position-bottom">
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 1000 100" preserveAspectRatio=none>
+                <path d="M 0 0 c 0 0 200 50 500 50 s 500 -50 500 -50 v 101 h -1000 v -100 z"></path>
+            </svg>
+        </div>
+    </section>
+    <section class="slice slice-lg">
+        <div class=container>
+            <div class="card">
+                <div class="card-body row align-items-center">
+                    <div class="col-md-12 col tab-content">
+                        <div class="row mb-5 justify-content-center text-center">
+                            <div class="col-lg-8 col-md-10">
+                                <div class=mt-2>
+                                    <p class="lead lh-180">All the books available in the library will be shown here</p>
+                                </div>
+                            </div>
                         </div>
-                        <span class="h6 text-muted">Standard Subscription</span>
-                    </div>
-                    <div class=card-body>
-                        <ul class="list-unstyled text-sm mb-4">
-                            <li>1 month subscription</li>
-                            <li>Access to all our books.</li>
-                            <li>Borrow the book for 15 days.</li>
-                            <li>Get a privilege to put upto 1 book requests.</li>
-                        </ul>
-                        <a href=#
-                            class="btn btn-sm btn-primary hover-translate-y-n3 hover-shadow-lg mb-3"
-                            target=_blank>Purchase now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-sm-6 mt-n7">
-                <div class="card card-pricing bg-soft-warning text-center px-3 shadow hover-scale-110">
-                    <div class="card-header py-5    border-0 delimiter-bottom">
-                        <div class="h1 text-center mb-0">&#8377 <span class="price font-weight-bolder">1000</span>
+                        <div class="table-responsive">
+                            <table class="table text-center">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Book Id</th>
+                                        <th scope="col">Book Name</th>
+                                        <th scope="col">Author</th>
+                                        <th scope="col">Publisher</th>
+                                        <th scope="col">Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Otto</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>Otto</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>11</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <span class="h6 text-muted">Golden Subscription</span>
-                    </div>
-                    <div class=card-body>
-                        <ul class="list-unstyled text-sm mb-4">
-                            <li>6 months subscription</li>
-                            <li>Access to all our books.</li>
-                            <li>Borrow the book for 15 days.</li>
-                            <li>Get a privilege to put upto 6 book requests.</li>
-                        </ul>
-                        <a href=#
-                            class="btn btn-sm btn-warning hover-translate-y-n3 hover-shadow-lg mb-3"
-                            target=_blank>Purchase now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-sm-6 mt-n7">
-                <div class="card card-pricing bg-soft-success text-center px-3 shadow hover-scale-110">
-                    <div class="card-header py-5    border-0 delimiter-bottom">
-                        <div class="h1 text-center mb-0">&#8377 <span class="price font-weight-bolder">1800</span>
-                        </div>
-                        <span class="h6 text-muted">Platinum Subscription</span>
-                    </div>
-                    <div class=card-body>
-                        <ul class="list-unstyled text-sm mb-4">
-                            <li>1 Year subscription</li>
-                            <li>Access to all our books.</li>
-                            <li>Borrow the book for 15 days.</li>
-                            <li>Get a privilege to put upto 12 book requests.</li>
-                        </ul>
-                        <a href=# class="btn btn-sm btn-success hover-translate-y-n3 hover-shadow-lg mb-3"
-                            target=_blank>Purchase now</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <footer class=position-relative id=footer-main>
         <div class="footer footer-dark bg-dark">
             <div class="shape-container shape-line shape-position-top shape-orientation-inverse">

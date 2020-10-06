@@ -1,3 +1,7 @@
+<?php
+    include "connection.php";
+?>
+
 <!DOCTYPE html>
 <html lang=en>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -7,7 +11,7 @@
    <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
    <title>Libs - library management system</title>
    <link rel=stylesheet href=../../assets/libs/%40fortawesome/fontawesome-free/css/all.min.css> <link rel=stylesheet
-      href="/assets/css/style.css" id=stylesheet>
+      href="style.css" id=stylesheet>
 </head>
 <body>
    <a href="/pages/index.html"
@@ -27,12 +31,17 @@
                         <p class="text-muted mb-0"> Join us to access our large collection of books .</p>
                      </div>
                      <span class=clearfix></span>
-                     <form>
+
+
+
+                     <form name="s_register" action="" method="post">
                         <div class=form-group>
                            <label class=form-control-label>Name</label>
                            <div class="input-group input-group-merge">
+
                               <input type=text class="form-control form-control-prepend" id=input-name
-                                 placeholder="John Ive">
+                                 placeholder="John Ive" name="name">
+
                               <div class=input-group-prepend><span class=input-group-text><i
                                        data-feather=user></i></span></div>
                            </div>
@@ -40,8 +49,10 @@
                         <div class=form-group>
                            <label class=form-control-label>Mobile Number</label>
                            <div class="input-group input-group-merge">
+
                               <input type=tel class="form-control form-control-prepend" id=input-name
-                                 placeholder="+91 9999999999">
+                                 placeholder="+91 9999999999" name="mobile">
+
                               <div class=input-group-prepend><span class=input-group-text><i
                                        data-feather=phone></i></span>
                               </div>
@@ -50,8 +61,10 @@
                         <div class=form-group>
                            <label class=form-control-label>Email address</label>
                            <div class="input-group input-group-merge">
+
                               <input type=email class="form-control form-control-prepend" id=input-email
-                                 placeholder=name@example.com>
+                                 placeholder=name@example.com name="email">
+
                               <div class=input-group-prepend><span class=input-group-text><i
                                        data-feather=at-sign></i></span>
                               </div>
@@ -59,14 +72,15 @@
                         </div>
                         <div class="form-group mb-2">
                            <div class="d-flex align-items-center justify-content-between">
-                              <div><label class=form-control-label>Password</label></div>
+
+                              <div><label class=form-control-label name="password">Password</label></div>
                               <div class=mb-2><a href=# class="small text-muted text-underline--dashed border-primary"
                                     data-toggle=password-text data-target=#input-password>Show password</a>
                               </div>
                            </div>
                            <div class="input-group input-group-merge">
                               <input type=password class="form-control form-control-prepend" id=input-password
-                                 placeholder=********>
+                                name="password" placeholder=********>
                               <div class=input-group-prepend><span class=input-group-text><i
                                        data-feather=key></i></span>
                               </div>
@@ -78,7 +92,7 @@
                                  for=check-terms>I agree to the <a href=#>terms and conditions</a>
                               </label> </div>
                         </div>
-                        <div class=mt-4><button type=submit class="btn btn-block btn-primary">Create my
+                        <div class=mt-4><button type=submit class="btn btn-block btn-primary" name="submit">Create my
                               account</button>
                         </div>
                      </form>
@@ -91,6 +105,63 @@
          </div>
       </div>
    </section>
+
+
+   
+
+   <?php
+
+      if(isset($_POST['submit']))
+      
+      {
+        $count=0;
+
+        $sql="SELECT name from `s_register`";
+        $res=mysqli_query($db,$sql);
+
+        while($row=mysqli_fetch_assoc($res))
+        {
+          if($row['name']==$_POST['name'])
+          {
+            $count=$count+1;
+          }
+        }
+
+
+        if($count==0)
+        {
+          mysqli_query($db,"INSERT INTO `s_register` VALUES('$_POST[name]', '$_POST[mobile]', '$_POST[email]', '$_POST[password]');");
+
+
+        ?>
+          
+          <?php
+        echo "<script> location.href='s_login.php'; </script>";
+        exit;
+         ?>
+         
+        <?php
+        }
+
+
+        else
+        {
+
+          ?>
+            <script type="text/javascript">
+              alert("The username already exist.");
+            </script>
+          <?php
+
+        }
+
+      }
+
+    ?>
+
+
+
+
    <script src=../../assets/libs/jquery/dist/jquery.min.js> </script> <script
       src=../../assets/libs/feather-icons/dist/feather.min.js> </script> <script src="/assets/js/main.js"> </script>
    <script>

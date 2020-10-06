@@ -1,3 +1,7 @@
+<?php
+        include "connection.php";
+        ?>
+
 <!DOCTYPE html>
 <html lang=en>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -8,7 +12,7 @@
     <title>Libs - library management system</title>
     <link rel=stylesheet href=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css> <link rel=stylesheet
         href=../../assets/libs/%40fortawesome/fontawesome-free/css/all.min.css> <link rel=stylesheet
-        href="/assets/css/style.css" id=stylesheet>
+        href="style.css" id=stylesheet>
 </head>
 
 <body>
@@ -30,12 +34,14 @@
                         </button>
                     </div>
                     <ul class="navbar-nav ml-lg-auto">
+
+
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/index.html">Home </a></li>
+                                href="index.php">Home </a></li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/books.html">Books</a></li>
+                                href="books.php">Books</a></li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/record.html">Record</a>
+                                href="record.php">Record</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                 href="/pages/feedback.html">Feedback</a>
