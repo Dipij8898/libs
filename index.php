@@ -10,10 +10,8 @@
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <title>Libs - library management system</title>
-    <link rel=stylesheet href=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css> <link rel=stylesheet
-        href=../../assets/libs/%40fortawesome/fontawesome-free/css/all.min.css> <link rel=stylesheet
-        href="style.css" id=stylesheet>
-
+    <link rel=stylesheet href="../library/assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css"> 
+    <link rel=stylesheet href="../library/assets/libs/%40fortawesome/fontawesome-free/css/all.min.css">
 </head>
 
 <body>
@@ -254,11 +252,11 @@
         </div>
         </div>
     </footer>
-    <script src=../../assets/libs/jquery/dist/jquery.min.js> </script> <script
-        src=../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js> </script> <script
-        src=../../assets/libs/feather-icons/dist/feather.min.js> </script> <script
-        src=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js> </script> <script
-        src="/assets/js/main.js"> </script>
+    <script src="../library/assets/libs/jquery/dist/jquery.min.js"> </script> <script
+        src="../library/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script> <script
+        src="../library/assets/libs/feather-icons/dist/feather.min.js"> </script> <script
+        src="../library/assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js"> </script> <script
+        src="../library/assets/js/main.js"> </script>
     <script>
         feather.replace({
             width: "1em",
