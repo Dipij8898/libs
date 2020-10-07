@@ -5,13 +5,13 @@
 <!DOCTYPE html>
 <html lang=en>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
 <head>
-   <meta charset=utf-8>
-   <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-   <title>Libs - library management system</title>
-   <link rel=stylesheet href=../../assets/libs/%40fortawesome/fontawesome-free/css/all.min.css> <link rel=stylesheet
-      href="style.css" id=stylesheet>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Libs - library management system</title>
+    <link rel=stylesheet href="../../libs/assets/libs/fancyapps/jquery.fancybox.min.css"> 
+    <link rel=stylesheet href="../../libs/assets/libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../libs/assets/css/style.css">
 </head>
 <body>
    <a href="/pages/index.html"
@@ -162,14 +162,17 @@
 
 
 
-   <script src=../../assets/libs/jquery/dist/jquery.min.js> </script> <script
-      src=../../assets/libs/feather-icons/dist/feather.min.js> </script> <script src="/assets/js/main.js"> </script>
-   <script>
-      feather.replace({
-         width: "1em",
-         height: "1em"
-      })
-   </script>
+<script src="../../libs/assets/libs/jquery/dist/jquery.min.js"> </script> <script
+        src="../../libs/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script> <script
+        src="../../libs/assets/libs/feather-icons/dist/feather.min.js"> </script> <script
+        src="../../libs/assets/libs/fancyapps/jquery.fancybox.min.js"> </script> <script
+        src="../../libs/assets/js/main.js"> </script>
+    <script>
+        feather.replace({
+            width: "1em",
+            height: "1em"
+        })
+    </script>
 
 </body>
 

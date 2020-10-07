@@ -1,16 +1,22 @@
+<?php
+    include "connection.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang=en>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
 <head>
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <title>Libs - library management system</title>
-    <link rel=stylesheet href="../library/assets/libs/%40fortawesome/fontawesome-free/css/all.min.css">
+    <link rel=stylesheet href="../../libs/assets/libs/fancyapps/jquery.fancybox.min.css"> 
+    <link rel=stylesheet href="../../libs/assets/libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../libs/assets/css/style.css">
 </head>
 <body>
     <a href="/pages/index.html"
-        class="btn btn-white btn-icon-only rounded-circle position-absolute zindex-101 opacity-7 left-4 top-4 d-none d-lg-inline-flex"
+        class="btn btn-white btn-icon-only rounded-circle position-absolute zindex-101 left-4 top-4 d-none d-lg-inline-flex opacity-7"
         data-toggle=tooltip data-placement=right title="Go back"><span class=btn-inner--icon><i
                 data-feather=arrow-left></i></span></a>
     <section class="section-half-rounded bg-cover bg-size--cover py-4 py-sm-0"
@@ -21,7 +27,7 @@
                 <div class="card shadow-lg border-0 mb-0">
                     <div class="card-body py-5 px-sm-5">
                         <div class="mb-5 text-center">
-                            <p class="h1 mb-1">Admin Login</p>
+                            <p class="h1 mb-1">Student Login</p>
                             <p class="text-muted mb-0">Sign in to your account to continue.</p>
                         </div><span class=clearfix></span>
                         <form>
@@ -58,7 +64,7 @@
                             <div class=mt-4><button type=submit class="btn btn-block btn-primary">Sign in</button>
                             </div>
                         </form>
-                        <div class="mt-4 text-center"><small>Not registered yet?</small> <a href="/pages/a_register.html"
+                        <div class="mt-4 text-center"><small>Not registered yet?</small> <a href="/pages/s_register.html"
                                 class="small font-weight-bold">Create an account</a>
                         </div>
                     </div>
@@ -66,9 +72,9 @@
             </div>
         </div>
     </section>
-    <script src="../library/assets/libs/jquery/dist/jquery.min.js"> </script> 
-    <script src="../library/assets/libs/feather-icons/dist/feather.min.js"> </script>
-    <script src="../library/assets/js/main.js"> </script>
+    <script src=../../assets/libs/jquery/dist/jquery.min.js> </script> 
+    <script src=../../assets/libs/feather-icons/dist/feather.min.js> </script>
+    <script src="/assets/js/main.js"> </script>
     <script>
         feather.replace({
             width: "1em",

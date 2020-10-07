@@ -1,14 +1,17 @@
+<?php
+include "connection.php";
+?>
+
 <!DOCTYPE html>
 <html lang=en>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
 <head>
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <title>Libs - library management system</title>
-    <link rel=stylesheet href=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css> <link rel=stylesheet
-        href=../../assets/libs/%40fortawesome/fontawesome-free/css/all.min.css> <link rel=stylesheet
-        href="/assets/css/style.css" id=stylesheet>
+    <link rel=stylesheet href="../../libs/assets/libs/fancyapps/jquery.fancybox.min.css"> 
+    <link rel=stylesheet href="../../libs/assets/libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../libs/assets/css/style.css">
 </head>
 
 <body>
@@ -16,7 +19,7 @@
         <nav class="navbar navbar-main navbar-expand-lg navbar-light" id=navbar-main>
             <div class=container>
                 <a class=navbar-brand>
-                    <img alt="Image placeholder" src="/assets/img/brand/p_logo.png" id=navbar-logo>
+                    <img alt="Image placeholder" src="../library/assets/img/brand/p_logo.png" id=navbar-logo>
                 </a>
                 <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-main-collapse
                     aria-controls=navbar-main-collapse aria-expanded=false aria-label="Toggle navigation">
@@ -30,18 +33,19 @@
                         </button>
                     </div>
                     <ul class="navbar-nav ml-lg-auto">
+                        
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/index.html">Home </a></li>
+                                href="index.php">Home </a></li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/books.html">Books</a></li>
+                                href="books.php">Books</a></li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/record.html">Record</a>
+                                href="record.html">Record</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/feedback.html">Feedback</a>
+                                href="feedback.php">Feedback</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/admin.html">Admin</a></li>
+                                href="admin.php">Admin</a></li>
                     </ul>
                     <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
@@ -50,14 +54,14 @@
                             <div class="dropdown-menu dropdown-menu-md p-0">
                                 <ul class="list-group list-group-flush px-lg-4">
                                     <li class="dropdown dropdown-animate">
-                                        <a href="/pages/a_login.html" class="list-group-item " role=button>
+                                        <a href="a_login.php" class="list-group-item " role=button>
                                             <div class=ml-3>
                                                 <h6 class="heading mb-0">Login as admin</h6>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="dropdown dropdown-animate">
-                                        <a href="/pages/s_login.html" class="list-group-item " role=button>
+                                        <a href="s_login.php" class="list-group-item " role=button>
                                             <div class=ml-3>
                                                 <h6 class="heading mb-0">Login as student</h6>
                                             </div>
@@ -118,100 +122,90 @@
             </div>
         </nav>
     </header>
-    <section class="slice py-6 pt-lg-7 pb-lg-8 bg-gradient-dark">
-        <div class="container d-flex align-items-center text-center text-lg-left">
-            <div class="col px-0">
-                <div class="row row-grid align-items-center">
-                    <div class=col-lg-6>
-                        <h1 class="h1 text-white text-center text-lg-left my-4">Have Something <strong>in mind?</strong>
-                        </h1>
-                        <p class="lead text-white text-center text-lg-left opacity-8">Feel free to communicate with us.
-                        </p>
-                        <div class="mt-5 text-center text-lg-left">
-                            <a href=#sct-form-contact data-scroll-to class="btn btn-white btn-lg btn-icon">
-                                <span class=btn-inner--icon>
-                                    <i data-feather=edit-2></i>
-                                </span>
-                                <span class=btn-inner--text>Write amessage</span>
-                            </a>
-                        </div>
+    <section class="slice slice-lg py-7 py-lg-8 bg-cover bg-size--cover"
+        style="background-image:url(/assets/img/backgrounds/p3.jpg)"> <span
+            class="mask bg-dark opacity-9"></span>
+        <div data-offset-top=#navbar-main>
+            <div class="container pt-xl-4">
+                <div class="row justify-content-center">
+                    <div class=col-lg-9>
+                        <h2 class="mb-4 text-center text-white">Enter name of the book</h2>
+                        <form>
+                            <div class="form-group bg-neutral rounded-pill mb-0 px-2 py-2 shadow">
+                                <div class=row>
+                                    <div class=col>
+                                        <div class="input-group input-group-merge shadow-none">
+                                            <div class=input-group-prepend><span
+                                                    class="input-group-text bg-transparent"><i
+                                                        data-feather=search></i></span></div>
+                                            <input type=text class="form-control form-control-flush shadow-none"
+                                                placeholder="Search for the books">
+                                        </div>
+                                    </div>
+                                    <div class=col-auto><button type=button
+                                            class="btn btn-block btn-warning rounded-pill">Search</button></div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="shape-container shape-line shape-position-bottom">
-            <svg width=2560px height=100px xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink
-                preserveAspectRatio=none x=0px y=0px viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100"
-                xml:space=preserve class="">
-                <polygon points="2560 0 2560 100 0 100"></polygon>
+        <div class="shape-container shape-position-bottom">
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 1000 100" preserveAspectRatio=none>
+                <path d="M 0 0 c 0 0 200 50 500 50 s 500 -50 500 -50 v 101 h -1000 v -100 z"></path>
             </svg>
         </div>
     </section>
-    <section class=section-half-rounded>
-        <div class="jumbotron section-inner left-0 rounded-bottom-right bg-section-secondary overflow-hidden col-lg-11">
-        </div>
-        <div class="container text-center text-lg-left">
-            <div class=row>
-                <div class="col-lg-6 col-md-10">
-                    <span class="badge badge-primary badge-pill">Support team</span>
-                    <h5 class="h5 lh-180 mt-4 mb-6">Our support team for any issues you might have.</h5>
-                </div>
-            </div>
-            <div class=row>
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                    <div data-animate-hover=2>
-                        <div class=mt-3>
-                            <h5 class="h6 mb-0">Harshal Ogale</h5>
+    <section class="slice slice-lg">
+        <div class=container>
+            <div class="card">
+                <div class="card-body row align-items-center">
+                    <div class="col-md-12 col tab-content">
+                        <div class="row mb-5 justify-content-center text-center">
+                            <div class="col-lg-8 col-md-10">
+                                <div class=mt-2>
+                                    <p class="lead lh-180">All the books available in the library will be shown here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table text-center">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Book Id</th>
+                                        <th scope="col">Book Name</th>
+                                        <th scope="col">Author</th>
+                                        <th scope="col">Publisher</th>
+                                        <th scope="col">Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Otto</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>Otto</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>11</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                    <div data-animate-hover=2>
-                        <div class=mt-3>
-                            <h5 class="h6 mb-0">Hiamnshu Patil</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                    <div data-animate-hover=2>
-                        <div class=mt-3>
-                            <h5 class="h6 mb-0">Sayali Kotkar</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                    <div data-animate-hover=2>
-                        <div class=mt-3>
-                            <h5 class="h6 mb-0">Divya Jangid</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="slice slice-lg" id=sct-form-contact>
-        <div class="container position-relative zindex-100">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-6 text-center">
-                    <h3>Contact us</h3>
-                    <p class=lh-190>If there's something we can help you with, jut let us know. We'll be more than happy
-                        to offer you our help</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class=col-lg-6>
-                    <form id=form-contact>
-                        <div class=form-group><input class="form-control form-control-lg" type=text
-                                placeholder="Your name" required></div>
-                        <div class=form-group><input class="form-control form-control-lg" type=email
-                                placeholder=email@example.com required></div>
-                        <div class=form-group><input class="form-control form-control-lg" type=text
-                                placeholder=+40-745-234-567 required></div>
-                        <div class=form-group><textarea class="form-control form-control-lg" data-toggle=autosize
-                                placeholder="Tell us a few words ..." rows=3 required></textarea></div>
-                        <div class=text-center><button type=reset class="btn-reset d-none"></button> <button type=submit
-                                class="btn btn-block btn-lg btn-primary mt-4">Send your message</button></div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -237,19 +231,17 @@
         </div>
         </div>
     </footer>
-    <script src=../../assets/libs/jquery/dist/jquery.min.js> </script> <script
-        src=../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js> </script> <script
-        src=../../assets/libs/feather-icons/dist/feather.min.js> </script> <script
-        src=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js> </script> <script
-        src="/assets/js/main.js"> </script>
+    <script src="../library/assets/libs/jquery/dist/jquery.min.js"> </script> <script
+        src="../library/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script> <script
+        src="../library/assets/libs/feather-icons/dist/feather.min.js"> </script> <script
+        src="../library/assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js"> </script> <script
+        src="../library/assets/js/main.js"> </script>
     <script>
         feather.replace({
             width: "1em",
             height: "1em"
         })
     </script>
-
 </body>
-
 
 </html>
