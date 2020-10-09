@@ -116,7 +116,7 @@ include "connection.php";
             <header class="" id=header-main>
 
             <nav class="navbar navbar-main navbar-expand-lg shadow navbar-light" id=navbar-main>
-                
+
             <div class="container-fluid">
 
                 <button class="navbar-toggler order-lg-2 ml-n3 ml-lg-0" type=button data-toggle=collapse
@@ -277,37 +277,99 @@ include "connection.php";
                         <div class="table-responsive">
                             <table class="table text-center">
                                 <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">Book Id</th>
-                                        <th scope="col">Book Name</th>
-                                        <th scope="col">Author</th>
-                                        <th scope="col">Publisher</th>
-                                        <th scope="col">Quantity</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
-                                        <td>20</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>Otto</td>
-                                        <td>11</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>11</td>
-                                        <td>0</td>
-                                    </tr>
-                                </tbody>
+                                    
+                                <?php
+
+if(isset($_POST['submit']))
+{
+    $q=mysqli_query($db,"SELECT * from books where name like '%$_POST[search]%' ");
+
+    if(mysqli_num_rows($q)==0)
+    {
+        echo "Sorry! No book found. Try searching again.";
+    }
+    else
+    {
+echo "<table class='table table-bordered table-hover' >";
+    echo "<tr style='background-color: #6db6b9e6;'>";
+        //Table header
+        echo "<th>"; echo "ID";	echo "</th>";
+        echo "<th>"; echo "Book-Name";  echo "</th>";
+        echo "<th>"; echo "Authors Name";  echo "</th>";
+        echo "<th>"; echo "Publisher";  echo "</th>";
+        echo "<th>"; echo "Quantity";  echo "</th>";
+        
+    echo "</tr>";	
+
+    while($row=mysqli_fetch_assoc($q))
+    {
+        echo "<tr>";
+        echo "<td>"; echo $row['bookid']; echo "</td>";
+        echo "<td>"; echo $row['bookname']; echo "</td>";
+        echo "<td>"; echo $row['author']; echo "</td>";
+        echo "<td>"; echo $row['publisher']; echo "</td>";
+        echo "<td>"; echo $row['quantity']; echo "</td>";
+        
+
+        echo "</tr>";
+    }
+echo "</table>";
+    }
+}
+    /*if button is not pressed.*/
+else
+{
+    $res=mysqli_query($db,"SELECT * FROM `books` ORDER BY `books`.`bookname` ASC;");
+
+echo "<table class='table table-bordered table-hover' >";
+    echo "<tr style='background-color: #6db6b9e6;'>";
+        //Table header
+        echo "<th>"; echo "ID";	echo "</th>";
+        echo "<th>"; echo "Book-Name";  echo "</th>";
+        echo "<th>"; echo "Authors Name";  echo "</th>";
+        echo "<th>"; echo "Publisher";  echo "</th>";
+        echo "<th>"; echo "Quantity";  echo "</th>";
+        
+    
+    echo "</tr>";	
+
+    while($row=mysqli_fetch_assoc($res))
+    {
+        echo "<tr>";
+        echo "<td>"; echo $row['bookid']; echo "</td>";
+        echo "<td>"; echo $row['bookname']; echo "</td>";
+        echo "<td>"; echo $row['author']; echo "</td>";
+        echo "<td>"; echo $row['publisher']; echo "</td>";
+        echo "<td>"; echo $row['quantity']; echo "</td>";
+    
+
+        echo "</tr>";
+    }
+echo "</table>";
+}
+
+if(isset($_POST['submit1']))
+{
+    if(isset($_SESSION['login_user']))
+    {
+        mysqli_query($db,"INSERT INTO issue_book Values('$_SESSION[login_user]', '$_POST[bookid]', '', '', '');");
+        ?>
+            <script type="text/javascript">
+                window.location="request.php"
+            </script>
+        <?php
+    }
+    else
+    {
+        ?>
+            <script type="text/javascript">
+                alert("You must login to Request a book");
+            </script>
+        <?php
+    }
+}
+
+?>
                             </table>
                         </div>
                     </div>
@@ -315,6 +377,13 @@ include "connection.php";
             </div>
         </div>
     </section>
+
+    
+
+
+
+
+
     <footer class=position-relative id=footer-main>
                 <div class="footer footer-dark bg-dark">
                     <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
