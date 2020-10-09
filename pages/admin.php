@@ -30,17 +30,19 @@
                     </div>
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/index.html">Home </a></li>
+                                href="index.php">Home </a></li>
+
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/books.html">Books</a></li>
+                                href="books.php">Books</a></li>
+
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/record.html">Record</a>
+                                href="record.php">Record</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/feedback.html">Feedback</a>
+                                href="feedback.php">Feedback</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/admin.html">Admin</a></li>
+                                href="admin.php">Admin</a></li>
                     </ul>
                     <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>

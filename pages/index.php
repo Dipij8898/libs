@@ -44,6 +44,8 @@
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                 href="admin.php">Admin</a></li>
                     </ul>
+
+
                     <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
                             <a class=nav-link href=# role=button data-toggle=dropdown aria-haspopup=true
@@ -250,6 +252,7 @@
         </div>
         </div>
     </footer>
+    
     <script src="../../libs/assets/libs/jquery/dist/jquery.min.js"> </script> <script
         src="../../libs/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script> <script
         src="../../libs/assets/libs/feather-icons/dist/feather.min.js"> </script> <script

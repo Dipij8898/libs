@@ -40,7 +40,7 @@
                            <div class="input-group input-group-merge">
 
                               <input type=text class="form-control form-control-prepend" id=input-name
-                                 placeholder="John Ive" name="name">
+                                 placeholder="John Ive" name="name" autocomplete="off">
 
                               <div class=input-group-prepend><span class=input-group-text><i
                                        data-feather=user></i></span></div>
@@ -51,7 +51,7 @@
                            <div class="input-group input-group-merge">
 
                               <input type=tel class="form-control form-control-prepend" id=input-name
-                                 placeholder="+91 9999999999" name="mobile">
+                                 placeholder="+91 9999999999" name="mobile" autocomplete="off">
 
                               <div class=input-group-prepend><span class=input-group-text><i
                                        data-feather=phone></i></span>
@@ -63,7 +63,7 @@
                            <div class="input-group input-group-merge">
 
                               <input type=email class="form-control form-control-prepend" id=input-email
-                                 placeholder=name@example.com name="email">
+                                 placeholder=name@example.com name="email" autocomplete="off">
 
                               <div class=input-group-prepend><span class=input-group-text><i
                                        data-feather=at-sign></i></span>
@@ -73,7 +73,7 @@
                         <div class="form-group mb-2">
                            <div class="d-flex align-items-center justify-content-between">
 
-                              <div><label class=form-control-label name="password">Password</label></div>
+                              <div><label class=form-control-label name="password" autocomplete="off">Password</label></div>
 
                               <div class=mb-2><a href=# class="small text-muted text-underline--dashed border-primary"
                                     data-toggle=password-text data-target=#input-password>Show password</a>

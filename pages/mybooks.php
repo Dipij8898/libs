@@ -24,17 +24,17 @@
                             aria-label="Toggle navigation"><i data-feather=x></i></button></div>
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item nav-item-spaced d-none d-lg-block"><a class=nav-link
-                                href="/pages/index.html">Home </a></li>
+                                href="/pages/index.php">Home </a></li>
                         <li class="nav-item nav-item-spaced d-none d-lg-block"><a class=nav-link
-                                href="/pages/books.html">Books</a></li>
+                                href="/pages/books.php">Books</a></li>
                         <li class="nav-item nav-item-spaced d-none d-lg-block"><a class=nav-link
-                                href="/pages/support.html">Support</a>
+                                href="/pages/support.php">Support</a>
                         </li>
                         <li class="nav-item nav-item-spaced d-none d-lg-block"><a class=nav-link
-                                href="/pages/mybooks.html">My books</a>
+                                href="/pages/mybooks.php">My books</a>
                         </li>
                         <li class="nav-item nav-item-spaced d-none d-lg-block"><a class=nav-link
-                                href="/pages/faq.html">FAQ's</a></li>
+                                href="/pages/faq.php">FAQ's</a></li>
                     </ul>
                     <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>

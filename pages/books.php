@@ -36,10 +36,12 @@ include "connection.php";
                         
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                 href="index.php">Home </a></li>
+
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                 href="books.php">Books</a></li>
+
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="record.html">Record</a>
+                                href="record.php">Record</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                 href="feedback.php">Feedback</a>

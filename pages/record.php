@@ -1,6 +1,6 @@
 <?php
-        include "connection.php";
-        ?>
+include "connection.php";
+?>
 
 <!DOCTYPE html>
 <html lang=en>
@@ -37,16 +37,18 @@
 
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                 href="index.php">Home </a></li>
+
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                 href="books.php">Books</a></li>
+
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                 href="record.php">Record</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/feedback.html">Feedback</a>
+                                href="feedback.php">Feedback</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/admin.html">Admin</a></li>
+                                href="admin.php">Admin</a></li>
                     </ul>
                     <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
@@ -353,16 +355,19 @@
         </div>
         </div>
     </footer>
-    <script src=../../assets/libs/jquery/dist/jquery.min.js> </script> <script
-        src=../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js> </script> <script
-        src=../../assets/libs/feather-icons/dist/feather.min.js> </script> <script
-        src=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js> </script> <script
-        src="/assets/js/main.js"> </script>
+    <script src="../../libs/assets/libs/jquery/dist/jquery.min.js"> </script> <script
+        src="../../libs/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script> <script
+        src="../../libs/assets/libs/feather-icons/dist/feather.min.js"> </script> <script
+        src="../../libs/assets/libs/fancyapps/jquery.fancybox.min.js"> </script> <script
+        src="../../libs/assets/js/main.js"> </script>
     <script>
         feather.replace({
             width: "1em",
             height: "1em"
         })
+    </script>
+
+
     </script>
 </body>
 

@@ -1,15 +1,19 @@
-
+<?php
+    include "connection.php";
+?>
 <!DOCTYPE html>
 <html lang=en>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <title>Libs - library management system</title>
-    <link rel=stylesheet href="../../libs/assets/libs/fancyapps/jquery.fancybox.min.css"> 
-    <link rel=stylesheet href="../../libs/assets/libs/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../../libs/assets/css/style.css">
+    <link rel=stylesheet href=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css> <link rel=stylesheet
+        href=../../assets/libs/%40fortawesome/fontawesome-free/css/all.min.css> <link rel=stylesheet
+        href="../../libs/assets/css/style.css" id=stylesheet>
 </head>
+
 <body>
     <header id=header-main>
         <nav class="navbar navbar-main navbar-expand-lg navbar-light" id=navbar-main>
@@ -29,18 +33,21 @@
                         </button>
                     </div>
                     <ul class="navbar-nav ml-lg-auto">
+                        
+<li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                         href="index.php">Home </a></li>
+
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/index.html">Home </a></li>
+                                href="books.php">Books</a></li>
+
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/books.html">Books</a></li>
-                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/record.html">Record</a>
+                                href="record.php">Record</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/feedback.html">Feedback</a>
+                                href="feedback.php">Feedback</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/admin.html">Admin</a></li>
+                                href="admin.php">Admin</a></li>
                     </ul>
                     <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
