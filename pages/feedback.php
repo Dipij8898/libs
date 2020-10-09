@@ -548,22 +548,74 @@
             </div>
             <div class="row justify-content-center">
                 <div class=col-lg-6>
-                    <form id=form-contact>
+                    <form id=form-contact name="login" action="" method="post">
+
                         <div class=form-group><input class="form-control form-control-lg" type=text
-                                placeholder="Your name" required></div>
+                                placeholder="Your name" required name="name"></div>
+
                         <div class=form-group><input class="form-control form-control-lg" type=email
-                                placeholder=email@example.com required></div>
+                                placeholder=email@example.com required name="email"></div>
+
                         <div class=form-group><input class="form-control form-control-lg" type=text
-                                placeholder=+40-745-234-567 required></div>
+                                placeholder=+40-745-234-567 required name="mobile"></div>
+
                         <div class=form-group><textarea class="form-control form-control-lg" data-toggle=autosize
-                                placeholder="Tell us a few words ..." rows=3 required></textarea></div>
-                        <div class=text-center><button type=reset class="btn-reset d-none"></button> <button type=submit
-                                class="btn btn-block btn-lg btn-dark mt-4">Send your message</button></div>
+                                placeholder="Tell us a few words ..." rows=3 required name="help"></textarea></div>
+
+          <div class=text-center><button type=reset class="btn-reset d-none" name="submit"></button> <button type=submit
+                                class="btn btn-block btn-lg btn-dark mt-4" name="submit">Send your message</button></div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+    <?php
+
+if(isset($_POST['submit']))
+
+{
+  $count=0;
+
+  $sql="SELECT name from `query`";
+  $res=mysqli_query($db,$sql);
+
+ 
+
+
+  if($count==0)
+  {
+ mysqli_query($db,"INSERT INTO `query` VALUES('$_POST[name]', '$_POST[email]', '$_POST[mobile]', '$_POST[help]');");
+
+
+  ?>
+    <script type="text/javascript">
+        alert("Your query is forwarded!!!.");
+      </script>
+    <?php
+  
+   ?>
+   
+  <?php
+  }
+
+
+  else
+  {
+
+    ?>
+      <script type="text/javascript">
+        alert("The username already exist.");
+      </script>
+    <?php
+
+  }
+
+}
+
+?>
     <footer class=position-relative id=footer-main>
                 <div class="footer footer-dark bg-dark">
                     <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
