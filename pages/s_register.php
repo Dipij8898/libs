@@ -74,7 +74,7 @@
                            <div class="d-flex align-items-center justify-content-between">
 
                               <div><label class=form-control-label name="password">Password</label></div>
-                              
+
                               <div class=mb-2><a href=# class="small text-muted text-underline--dashed border-primary"
                                     data-toggle=password-text data-target=#input-password>Show password</a>
                               </div>

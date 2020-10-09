@@ -30,30 +30,40 @@
                             <p class="h1 mb-1">Student Login</p>
                             <p class="text-muted mb-0">Sign in to your account to continue.</p>
                         </div><span class=clearfix></span>
-                        <form>
-                            <div class=form-group><label class=form-control-label>Email</label>
+
+
+                        
+                        <form name="login" action="" method="post">
+                            <div class=form-group><label class=form-control-label >Email</label>
                                 <div class="input-group input-group-merge">
+
                                     <input type=email class="form-control form-control-prepend" id=input-email
-                                        placeholder=name@example.com>
+                                        placeholder=name@example.com name="email">
+
                                     <div class=input-group-prepend>
                                         <span class=input-group-text>
                                             <i data-feather=user></i></span></div>
                                 </div>
                             </div>
                             <div class="form-group mb-0">
-                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center justify-content-between" >
                                     <div>
-                                        <label class=form-control-label>Password</label>
+                                        <label class=form-control-label name="pass">Password</label>
                                     </div>
                                     <div class=mb-2>
+
+
                                         <a href=# class="small text-muted text-underline--dashed border-primary"
-                                            data-toggle=password-text data-target=#input-password>Show password
+                                            data-toggle=password-text data-target=#input-password >Show password
                                         </a>
                                     </div>
                                 </div>
-                                <div class="input-group input-group-merge"><input type=password
+                                <div class="input-group input-group-merge">
+
+                                    <input type=password
                                         class="form-control form-control-prepend" id=input-password
-                                        placeholder=Password>
+                                        placeholder=Password name="password">
+
                                     <div class=input-group-prepend><span class=input-group-text><i
                                                 data-feather=key></i></span></div>
                                 </div>
@@ -61,20 +71,62 @@
                                     <a href="/pages/recover.html" class="small font-weight-bold">forgot password ?</a>
                                 </div>
                             </div>
-                            <div class=mt-4><button type=submit class="btn btn-block btn-primary">Sign in</button>
+
+
+                 <div class=mt-4><button type=submit class="btn btn-block btn-primary" name="submit">Sign in</button>
                             </div>
+
+
                         </form>
                         <div class="mt-4 text-center"><small>Not registered yet?</small> <a href="/pages/s_register.html"
-                                class="small font-weight-bold">Create an account</a>
+                                class="small font-weight-bold" >Create an account</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
-    <script src=../../assets/libs/jquery/dist/jquery.min.js> </script> 
-    <script src=../../assets/libs/feather-icons/dist/feather.min.js> </script>
-    <script src="/assets/js/main.js"> </script>
+
+
+    <?php
+
+    if(isset($_POST['submit']))
+    {
+      $count=0;
+      $res=mysqli_query($db,"SELECT * FROM `s_register` WHERE email='$_POST[email]' && password='$_POST[password]';");
+      
+      $row= mysqli_fetch_assoc($res);
+      $count=mysqli_num_rows($res);
+
+      if($count==0)
+      {
+        ?>
+            <script type="text/javascript">
+           alert("not match");
+          </script>
+        <?php
+      }
+      else
+      {
+      
+        ?>
+          <script type="text/javascript">
+            window.location="index.php"
+          </script>
+        <?php
+      }
+    }
+
+  ?>
+
+
+
+<script src="../../libs/assets/libs/jquery/dist/jquery.min.js"> </script> <script
+        src="../../libs/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script> <script
+        src="../../libs/assets/libs/feather-icons/dist/feather.min.js"> </script> <script
+        src="../../libs/assets/libs/fancyapps/jquery.fancybox.min.js"> </script> <script
+        src="../../libs/assets/js/main.js"> </script>
     <script>
         feather.replace({
             width: "1em",
