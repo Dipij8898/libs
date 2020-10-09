@@ -114,116 +114,118 @@ include "connection.php";
                 </div>
             </div>
             <header class="" id=header-main>
-                <nav class="navbar navbar-main navbar-expand-lg shadow navbar-light" id=navbar-main>
-                    <div class="container-fluid">
-                        <button class="navbar-toggler order-lg-2 ml-n3 ml-lg-0" type=button data-toggle=collapse
+
+            <nav class="navbar navbar-main navbar-expand-lg shadow navbar-light" id=navbar-main>
+                
+            <div class="container-fluid">
+
+                <button class="navbar-toggler order-lg-2 ml-n3 ml-lg-0" type=button data-toggle=collapse
+                    data-target=#navbar-main-collapse aria-controls=navbar-main-collapse aria-expanded=false
+                    aria-label="Toggle navigation"><span class=navbar-toggler-icon></span></button>
+                <a class="navbar-brand ml-5 order-lg-1" href="../../libs/pages/index.php"> <img alt="Image placeholder"
+                        src="../../libs/assets/img/brand/p_logo.png" id=navbar-logo></a>
+                <div class="collapse navbar-collapse navbar-collapse-overlay order-lg-3" id=navbar-main-collapse>
+                    <div class=position-relative><button class=navbar-toggler type=button data-toggle=collapse
                             data-target=#navbar-main-collapse aria-controls=navbar-main-collapse aria-expanded=false
-                            aria-label="Toggle navigation"><span class=navbar-toggler-icon></span></button>
-                        <a class="navbar-brand ml-5 order-lg-1" href="/pages/index.php"> <img alt="Image placeholder"
-                                src="../../libs/assets/img/brand/p_logo.png" id=navbar-logo></a>
-                        <div class="collapse navbar-collapse navbar-collapse-overlay order-lg-3"
-                            id=navbar-main-collapse>
-                            <div class=position-relative><button class=navbar-toggler type=button data-toggle=collapse
-                                    data-target=#navbar-main-collapse aria-controls=navbar-main-collapse
-                                    aria-expanded=false aria-label="Toggle navigation"><i data-feather=x></i></button>
-                            </div>
-                            <ul class="navbar-nav ml-lg-auto">
-                                <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                        href="../../libs/pages/index.php">Home </a></li>
-                                <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                        href="../../libs/pages/books.php">Books</a></li>
-                                <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                        href="../../libs/pages/record.php">Record</a>
-                                </li>
-                                <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                        href="../../libs/pages/feedback.php">Feedback</a>
-                                </li>
-                                <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                        href="../../libs/pages/admin.php">Admin</a></li>
-                            </ul>
-                            <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
-                                <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
-                                    <a class=nav-link href=# role=button data-toggle=dropdown aria-haspopup=true
-                                        aria-expanded=false>Login</a>
-                                    <div class="dropdown-menu dropdown-menu-md p-0">
-                                        <ul class="list-group list-group-flush px-lg-4">
-                                            <li class="dropdown dropdown-animate">
-                                                <a href="../../libs/pages/a_login.php" class="list-group-item " role=button>
-                                                    <div class=ml-3>
-                                                        <h6 class="heading mb-0">Login as admin</h6>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="dropdown dropdown-animate">
-                                                <a href="../../libs/pages/s_login.php" class="list-group-item " role=button>
-                                                    <div class=ml-3>
-                                                        <h6 class="heading mb-0">Login as student</h6>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
-                                    <a class="btn btn-sm btn-dark btn-icon ml-3" href=# role=button data-toggle=dropdown
-                                        aria-haspopup=true aria-expanded=false><span class=btn-inner--icon><i
-                                                data-feather=award></i></span> <span
-                                            class=btn-inner--text>Register</span></a>
-                                    <div class="dropdown-menu dropdown-menu-md p-0">
-                                        <ul class="list-group list-group-flush px-lg-4">
-                                            <li class="dropdown dropdown-animate">
-                                                <a href="../../libs/pages/a_register.php" class="list-group-item " role=button>
-                                                    <div class=ml-3>
-                                                        <h6 class="heading mb-0">Register as admin</h6>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="dropdown dropdown-animate">
-                                                <a href="../../libs/pages/s_register.php" class="list-group-item " role=button>
-                                                    <div class=ml-3>
-                                                        <h6 class="heading mb-0">Register as student</h6>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="d-lg-none p-2 text-center">
-                                <a href="../../libs/pages/s_login.php" class="btn btn-block btn-sm btn-secondary" target=_blank>
-                                    login as student
-                                </a>
-                            </div>
-                            <div class="d-lg-none p-2 text-center">
-                                <a href="../../libs/pages/s_register.php" class="btn btn-block btn-sm btn-primary" target=_blank>
-                                    register as student
-                                </a>
-                            </div>
-                            <div class="d-lg-none p-2 text-center">
-                                <a href="/pages/a_login.php" class="btn btn-block btn-sm btn-secondary" target=_blank>
-                                    login as admin
-                                </a>
-                            </div>
-                            <div class="d-lg-none p-2 text-center">
-                                <a href="../../libs/pages/a_register.php" class="btn btn-block btn-sm btn-primary" target=_blank>
-                                    register as admin
-                                </a>
-                            </div>
-                            <div class="order-lg-2 ml-lg-3">
-                                <a class="avatar" href="../../libs/pages/cart.php" role=button>
-                                    <img alt="Image placeholder" src="../assets/img/svg/icons/Cart_Pay.svg">
-                                </a>
-                            </div>
-                            <div class="order-lg-3 ml-lg-3"><a class="" href=#modal-profile role=button
-                                    data-toggle=modal>
-                                    <span class="avatar rounded-circle"><img alt="Image placeholder"
-                                            src="../assets/img/svg/icons/User_male.svg">
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
+                            aria-label="Toggle navigation"><i data-feather=x></i></button>
                     </div>
-                </nav>
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                                href="../../libs/pages/index.php">Home </a></li>
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                                href="../../libs/pages/books.php">Books</a></li>
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                                href="../../libs/pages/record.php">Record</a>
+                        </li>
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                                href="../../libs/pages/feedback.php">Feedback</a>
+                        </li>
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                                href="../../libs/pages/admin.php">Admin</a></li>
+                    </ul>
+                    <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
+                            <a class=nav-link href=# role=button data-toggle=dropdown aria-haspopup=true
+                                aria-expanded=false>Login</a>
+                            <div class="dropdown-menu dropdown-menu-md p-0">
+                                <ul class="list-group list-group-flush px-lg-4">
+                                    <li class="dropdown dropdown-animate">
+                                        <a href="../../libs/pages/a_login.php" class="list-group-item " role=button>
+                                            <div class=ml-3>
+                                                <h6 class="heading mb-0">Login as admin</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown dropdown-animate">
+                                        <a href="../../libs/pages/s_login.php" class="list-group-item " role=button>
+                                            <div class=ml-3>
+                                                <h6 class="heading mb-0">Login as student</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
+                            <a class="btn btn-sm btn-dark btn-icon ml-3" href=# role=button data-toggle=dropdown
+                                aria-haspopup=true aria-expanded=false><span class=btn-inner--icon><i
+                                        data-feather=award></i></span> <span class=btn-inner--text>Register</span></a>
+                            <div class="dropdown-menu dropdown-menu-md p-0">
+                                <ul class="list-group list-group-flush px-lg-4">
+                                    <li class="dropdown dropdown-animate">
+                                        <a href="../../libs/pages/a_register.php" class="list-group-item " role=button>
+                                            <div class=ml-3>
+                                                <h6 class="heading mb-0">Register as admin</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown dropdown-animate">
+                                        <a href="../../libs/pages/s_register.php" class="list-group-item " role=button>
+                                            <div class=ml-3>
+                                                <h6 class="heading mb-0">Register as student</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="d-lg-none p-2 text-center">
+                        <a href="../../libs/pages/s_login.php" class="btn btn-block btn-sm btn-secondary" target=_blank>
+                            login as student
+                        </a>
+                    </div>
+                    <div class="d-lg-none p-2 text-center">
+                        <a href="../../libs/pages/s_register.php" class="btn btn-block btn-sm btn-primary"
+                            target=_blank>
+                            register as student
+                        </a>
+                    </div>
+                    <div class="d-lg-none p-2 text-center">
+                        <a href="/pages/a_login.php" class="btn btn-block btn-sm btn-secondary" target=_blank>
+                            login as admin
+                        </a>
+                    </div>
+                    <div class="d-lg-none p-2 text-center">
+                        <a href="../../libs/pages/a_register.php" class="btn btn-block btn-sm btn-primary"
+                            target=_blank>
+                            register as admin
+                        </a>
+                    </div>
+                    <div class="order-lg-2 ml-lg-3">
+                        <a class="avatar" href="../../libs/pages/cart.php" role=button>
+                            <img alt="Image placeholder" src="../assets/img/svg/icons/Cart_Pay.svg">
+                        </a>
+                    </div>
+                    <div class="order-lg-3 ml-lg-3"><a class="" href=#modal-profile role=button data-toggle=modal>
+                            <span class="avatar rounded-circle"><img alt="Image placeholder"
+                                    src="../assets/img/svg/icons/User_male.svg">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
             </header>
     <section class="slice slice-lg py-7 py-lg-8 bg-cover bg-size--cover"
         style="background-image:url('../../libs/assets/img/backgrounds/p3.jpg')"> <span

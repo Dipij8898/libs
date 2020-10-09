@@ -118,8 +118,10 @@ include "connection.php";
                 <button class="navbar-toggler order-lg-2 ml-n3 ml-lg-0" type=button data-toggle=collapse
                     data-target=#navbar-main-collapse aria-controls=navbar-main-collapse aria-expanded=false
                     aria-label="Toggle navigation"><span class=navbar-toggler-icon></span></button>
-                <a class="navbar-brand ml-5 order-lg-1" href="/pages/index.php"> <img alt="Image placeholder"
+
+                <a class="navbar-brand ml-5 order-lg-1" href="../../libs/pages/index.php"> <img alt="Image placeholder"
                         src="../../libs/assets/img/brand/p_logo.png" id=navbar-logo></a>
+
                 <div class="collapse navbar-collapse navbar-collapse-overlay order-lg-3" id=navbar-main-collapse>
                     <div class=position-relative><button class=navbar-toggler type=button data-toggle=collapse
                             data-target=#navbar-main-collapse aria-controls=navbar-main-collapse aria-expanded=false
