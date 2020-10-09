@@ -1,3 +1,6 @@
+<?php
+    include "connection.php";
+?>
 <!DOCTYPE html>
 <html lang=en>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -6,10 +9,11 @@
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <title>Libs - library management system</title>
-    <link rel=stylesheet href=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css> <link rel=stylesheet
-        href=../../assets/libs/%40fortawesome/fontawesome-free/css/all.min.css> <link rel=stylesheet
-        href="/assets/css/style.css" id=stylesheet>
+    <link rel=stylesheet href="../../libs/assets/libs/fancyapps/jquery.fancybox.min.css">
+    <link rel=stylesheet href="../../libs/assets/libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../libs/assets/css/style.css">
 </head>
+
 <body>
     <div class="modal fade fixed-right" id=modal-profile tabindex=-1 role=dialog aria-hidden=true>
         <div class="modal-dialog modal-vertical" role=document>
@@ -49,7 +53,8 @@
                                         <span class="d-block h6 text-sm mb-0">Images</span>
                                         <p class="mb-0 text-sm">2580 files</p>
                                     </div>
-                                    <div class="col-auto text-right"><a href=# class="h6 text-sm">18 GB</a></div>
+                                    <div class="col-auto text-right"><a href=# class="h6 text-sm">18 GB</a>
+                                    </div>
                                 </div>
                                 <div class="row align-items-center mb-3">
                                     <div class=col-auto>
@@ -71,7 +76,8 @@
                                         <span class="d-block h6 text-sm mb-0">Media</span>
                                         <p class="mb-0 text-sm">190 files</p>
                                     </div>
-                                    <div class="col-auto text-right"><a href=# class="h6 text-sm">10 GB</a></div>
+                                    <div class="col-auto text-right"><a href=# class="h6 text-sm">10 GB</a>
+                                    </div>
                                 </div>
                                 <div class="row align-items-center">
                                     <div class=col-auto>
@@ -89,10 +95,11 @@
                         <div class="card shadow-none border-0 bg-section-secondary mt-8">
                             <div class="card-body pt-0 px-3 text-center">
                                 <div class="pb-4 px-5 mt-n6"><img
-                                        src=../../assets/img/svg/illustrations/illustration-15.svg
+                                        src="../../libs/assets/img/svg/illustrations/illustration-15.svg"
                                         class="img-fluid img-center" alt=Illustration></div>
                                 <h5 class="h5 mb-3">Upgrade to Pro</h5>
-                                <p class=text-muted>One year support, montlhy updates for up to 5 team members.</p>
+                                <p class=text-muted>One year support, montlhy updates for up to 5 team members.
+                                </p>
                                 <a href=# class="btn btn-sm btn-primary">Upgrade</a>
                             </div>
                         </div>
@@ -110,25 +117,26 @@
                 <button class="navbar-toggler order-lg-2 ml-n3 ml-lg-0" type=button data-toggle=collapse
                     data-target=#navbar-main-collapse aria-controls=navbar-main-collapse aria-expanded=false
                     aria-label="Toggle navigation"><span class=navbar-toggler-icon></span></button>
-                <a class="navbar-brand ml-5 order-lg-1" href="/pages/index.html"> <img alt="Image placeholder"
-                        src="/assets/img/brand/p_logo.png" id=navbar-logo></a>
+                <a class="navbar-brand ml-5 order-lg-1" href="/pages/index.php"> <img alt="Image placeholder"
+                        src="../../libs/assets/img/brand/p_logo.png" id=navbar-logo></a>
                 <div class="collapse navbar-collapse navbar-collapse-overlay order-lg-3" id=navbar-main-collapse>
                     <div class=position-relative><button class=navbar-toggler type=button data-toggle=collapse
                             data-target=#navbar-main-collapse aria-controls=navbar-main-collapse aria-expanded=false
-                            aria-label="Toggle navigation"><i data-feather=x></i></button></div>
+                            aria-label="Toggle navigation"><i data-feather=x></i></button>
+                    </div>
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/index.html">Home </a></li>
+                                href="../../libs/pages/index.php">Home </a></li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/books.html">Books</a></li>
+                                href="../../libs/pages/books.php">Books</a></li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/record.html">Record</a>
+                                href="../../libs/pages/record.php">Record</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/feedback.html">Feedback</a>
+                                href="../../libs/pages/feedback.php">Feedback</a>
                         </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="/pages/admin.html">Admin</a></li>
+                                href="../../libs/pages/admin.php">Admin</a></li>
                     </ul>
                     <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
@@ -137,14 +145,14 @@
                             <div class="dropdown-menu dropdown-menu-md p-0">
                                 <ul class="list-group list-group-flush px-lg-4">
                                     <li class="dropdown dropdown-animate">
-                                        <a href="/pages/a_login.html" class="list-group-item " role=button>
+                                        <a href="../../libs/pages/a_login.php" class="list-group-item " role=button>
                                             <div class=ml-3>
                                                 <h6 class="heading mb-0">Login as admin</h6>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="dropdown dropdown-animate">
-                                        <a href="/pages/s_login.html" class="list-group-item " role=button>
+                                        <a href="../../libs/pages/s_login.php" class="list-group-item " role=button>
                                             <div class=ml-3>
                                                 <h6 class="heading mb-0">Login as student</h6>
                                             </div>
@@ -160,14 +168,14 @@
                             <div class="dropdown-menu dropdown-menu-md p-0">
                                 <ul class="list-group list-group-flush px-lg-4">
                                     <li class="dropdown dropdown-animate">
-                                        <a href="/pages/a_register.html" class="list-group-item " role=button>
+                                        <a href="../../libs/pages/a_register.php" class="list-group-item " role=button>
                                             <div class=ml-3>
                                                 <h6 class="heading mb-0">Register as admin</h6>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="dropdown dropdown-animate">
-                                        <a href="/pages/s_register.html" class="list-group-item " role=button>
+                                        <a href="../../libs/pages/s_register.php" class="list-group-item " role=button>
                                             <div class=ml-3>
                                                 <h6 class="heading mb-0">Register as student</h6>
                                             </div>
@@ -178,27 +186,29 @@
                         </li>
                     </ul>
                     <div class="d-lg-none p-2 text-center">
-                        <a href="/pages/s_login.html" class="btn btn-block btn-sm btn-secondary" target=_blank>
+                        <a href="../../libs/pages/s_login.php" class="btn btn-block btn-sm btn-secondary" target=_blank>
                             login as student
                         </a>
                     </div>
                     <div class="d-lg-none p-2 text-center">
-                        <a href="/pages/s_register.html" class="btn btn-block btn-sm btn-primary" target=_blank>
+                        <a href="../../libs/pages/s_register.php" class="btn btn-block btn-sm btn-primary"
+                            target=_blank>
                             register as student
                         </a>
                     </div>
                     <div class="d-lg-none p-2 text-center">
-                        <a href="/pages/a_login.html" class="btn btn-block btn-sm btn-secondary" target=_blank>
+                        <a href="/pages/a_login.php" class="btn btn-block btn-sm btn-secondary" target=_blank>
                             login as admin
                         </a>
                     </div>
                     <div class="d-lg-none p-2 text-center">
-                        <a href="/pages/a_register.html" class="btn btn-block btn-sm btn-primary" target=_blank>
+                        <a href="../../libs/pages/a_register.php" class="btn btn-block btn-sm btn-primary"
+                            target=_blank>
                             register as admin
                         </a>
                     </div>
                     <div class="order-lg-2 ml-lg-3">
-                        <a class="avatar" href="/pages/cart.html" role=button>
+                        <a class="avatar" href="../../libs/pages/cart.php" role=button>
                             <img alt="Image placeholder" src="../assets/img/svg/icons/Cart_Pay.svg">
                         </a>
                     </div>
@@ -232,7 +242,7 @@
                                 <th class="text-dark" scope=col style=min-width:240px>Name</th>
                                 <th class="text-dark" scope=col>Status</th>
                                 <th class="text-dark" scope=col>Transaction Type</th>
-                                
+
                                 <th scope=col></th>
                             </tr>
                         </thead>
@@ -241,17 +251,17 @@
                                 <th>
                                     <div class="h6">#1</div>
                                 </th>
-                                 <td>
+                                <td>
                                     <div class="h6">Book Name</div>
                                 </td>
-                                
+
                                 <td>
                                     <button class="btn btn-sm btn-secondary">shipped</button>
                                 </td>
                                 <td>
                                     <div class="h6">Borrowed</div>
                                 </td>
-                                 
+
                                 <td class=text-right>
                                     <div class="actions ml-3">
                                         <a href=# class="action-item mr-2" data-toggle=tooltip title="Quick view">
@@ -266,33 +276,39 @@
             </div>
         </div>
     </div>
-    <script src=../../assets/libs/jquery/dist/jquery.min.js> </script> <script
-        src=../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js> </script> <script
-        src=../../assets/libs/svg-injector/dist/svg-injector.min.js> </script> <script
-        src=../../assets/libs/feather-icons/dist/feather.min.js> </script> <script
-        src=../../assets/libs/in-view/dist/in-view.min.js> </script> <script
-        src=../../assets/libs/sticky-kit/dist/sticky-kit.min.js> </script> <script
-        src=../../assets/libs/imagesloaded/imagesloaded.pkgd.min.js> </script> <script
-        src=../../assets/libs/progressbar.js/dist/progressbar.min.js> </script> <script
-        src=../../assets/js/quick-website.js> </script> <script>
-        feather.replace({
-            width: "1em",
-            height: "1em"
-        })
-    </script>
-    <script>
-        ! function (e, t, a, n, g) {
-            e[n] = e[n] || [], e[n].push({
-                "gtm.start": (new Date).getTime(),
-                event: "gtm.js"
-            });
-            var m = t.getElementsByTagName(a)[0],
-                r = t.createElement(a);
-            r.async = !0, r.src = "../../../../www.googletagmanager.com/gtm4c6a.js?id=GTM-MF4DZVH", m.parentNode
-                .insertBefore(r, m)
-        }(window, document, "script", "dataLayer")
-    </script>
-</body>
-<!-- Mirrored from preview.webpixels.io/quick-website-ui-kit/pages/account/users.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Apr 2020 11:35:27 GMT -->
+    <footer class=position-relative id=footer-main>
+                <div class="footer footer-dark bg-dark">
+                    <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+                        <svg width=2560px height=100px xmlns=http://www.w3.org/2000/svg
+                            xmlns:xlink=http://www.w3.org/1999/xlink preserveAspectRatio=none x=0px y=0px
+                            viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100" xml:space=preserve
+                            class=fill-section-secondary>
+                            <polygon points="2560 0 2560 100 0 100"></polygon>
+                        </svg>
+                    </div>
+                    <hr class="divider divider-fade divider-dark">
+                    <div class="container">
+                        <div class="row justify-content-center pb-3">
+                            <div class="copyright text-sm font-weight-bold text-center">&copy; 2020 <a
+                                    class=font-weight-bold target=_blank>Libs.</a> All
+                                rights reserved
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </footer>
+
+            <script src="../../libs/assets/libs/jquery/dist/jquery.min.js"> </script>
+            <script src="../../libs/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script>
+            <script src="../../libs/assets/libs/feather-icons/dist/feather.min.js"> </script>
+            <script src="../../libs/assets/libs/fancyapps/jquery.fancybox.min.js"> </script>
+            <script src="../../libs/assets/js/main.js"> </script>
+            <script>
+                feather.replace({
+                    width: "1em",
+                    height: "1em"
+                })
+            </script>
 
 </html>

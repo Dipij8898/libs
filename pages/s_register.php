@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="../../libs/assets/css/style.css">
 </head>
 <body>
-   <a href="/pages/index.html"
+   <a href="../../libs/pages/index.php"
         class="btn btn-white btn-icon-only rounded-circle position-absolute zindex-101 left-4 top-4 d-none opacity-7 d-lg-inline-flex"
         data-toggle=tooltip data-placement=right title="Go back"><span class=btn-inner--icon><i
                 data-feather=arrow-left></i></span></a>
    <section class="section-half-rounded bg-cover bg-size--cover py-4 py-sm-0"
-      style="background-image:url('/assets/img/backgrounds/p4.jpg')"> <div
+      style="background-image:url('../../libs/assets/img/backgrounds/p4.jpg')"> <div
       class="container-fluid d-flex flex-column py-4 py-sm-0 py-lg-5 py-xl-0">
       <div class="row align-items-center min-vh-100">
          <div class="col-md-8 col-lg-6 col-xl-4 mx-auto">

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../libs/assets/css/style.css">
 </head>
    <body>
-      <a href="/pages/index.html"
+      <a href="../../libs/pages/index.html"
         class="btn btn-white btn-icon-only rounded-circle position-absolute zindex-101 left-4 opacity-7 top-4 d-none d-lg-inline-flex"
         data-toggle=tooltip data-placement=right title="Go back"><span class=btn-inner--icon><i
                 data-feather=arrow-left></i></span></a>
