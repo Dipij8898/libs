@@ -29,7 +29,7 @@
                         </div>
                         <div class="text-center mb-4">
                             <h6 class="h5 mb-0">User Name</h6>
-                            <span class="d-block text-muted">Useremail@gmail.com</span>
+                            <span class="d-block text-muted">Usere-mail@gmail.com</span>
                         </div>
                         <div class="d-flex mb-5">
                             <div class="col-4 text-center"><a href=#
