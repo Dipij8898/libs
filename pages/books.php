@@ -5,117 +5,116 @@ include "connection.php";
 <!DOCTYPE html>
 <html lang=en>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <title>Libs - library management system</title>
-    <link rel=stylesheet href="../../libs/assets/libs/fancyapps/jquery.fancybox.min.css"> 
+    <link rel=stylesheet href="../../libs/assets/libs/fancyapps/jquery.fancybox.min.css">
     <link rel=stylesheet href="../../libs/assets/libs/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../libs/assets/css/style.css">
 </head>
 
 <body>
-<div class="modal fade fixed-right" id=modal-profile tabindex=-1 role=dialog aria-hidden=true>
-                <div class="modal-dialog modal-vertical" role=document>
-                    <div class=modal-content>
-                        <div class=modal-body>
-                            <div><button type=button class=close data-dismiss=modal aria-label=Close><span
-                                        aria-hidden=true>&times;</span></button></div>
-                            <div class=px-4>
-                                <div class="d-flex my-4">
-                                    <div class="avatar-parent-child mx-auto"><img alt="Image placeholder"
-                                            src="../assets/img/svg/icons/User_male.svg"
-                                            class="avatar avatar-xl rounded-circle">
-                                        <span class="avatar-child avatar-badge bg-success"></span></div>
-                                </div>
-                                <div class="text-center mb-4">
-                                    <h6 class="h5 mb-0">User Name</h6>
-                                    <span class="d-block text-muted">Useremail@gmail.com</span>
-                                </div>
-                                <div class="d-flex mb-5">
-                                    <div class="col-4 text-center"><a href=#
-                                            class="h5 font-weight-bolder text-warning mb-0">5</a> <span
-                                            class="d-block text-sm">Borrowed</span></div>
-                                    <div class="col-4 text-center"><a href=#
-                                            class="h5 font-weight-bolder text-warning mb-0">3</a> <span
-                                            class="d-block text-sm">Purchased</span></div>
-                                    <div class="col-4 text-center"><a href=#
-                                            class="h5 font-weight-bolder text-warning mb-0">20</a> <span
-                                            class="d-block text-sm">Points</span></div>
-                                </div>
-                                <div class=mb-5>
-                                    <div class="mt-4 pt-4 border-top">
-                                        <div class="row align-items-center mb-3">
-                                            <div class=col-auto>
-                                                <div class="icon icon-shape bg-soft-warning text-warning"><i
-                                                        class="fas fa-image"></i></div>
-                                            </div>
-                                            <div class="col pl-0">
-                                                <span class="d-block h6 text-sm mb-0">Images</span>
-                                                <p class="mb-0 text-sm">2580 files</p>
-                                            </div>
-                                            <div class="col-auto text-right"><a href=# class="h6 text-sm">18 GB</a>
-                                            </div>
-                                        </div>
-                                        <div class="row align-items-center mb-3">
-                                            <div class=col-auto>
-                                                <div class="icon icon-shape bg-soft-success text-success"><i
-                                                        class="fas fa-file-alt"></i></div>
-                                            </div>
-                                            <div class="col pl-0">
-                                                <span class="d-block h6 text-sm mb-0">Documents</span>
-                                                <p class="mb-0 text-sm">375 files</p>
-                                            </div>
-                                            <div class="col-auto text-right"><a href=# class="h6 text-sm">5 GB</a></div>
-                                        </div>
-                                        <div class="row align-items-center mb-3">
-                                            <div class=col-auto>
-                                                <div class="icon icon-shape bg-soft-danger text-danger"><i
-                                                        class="fas fa-video"></i></div>
-                                            </div>
-                                            <div class="col pl-0">
-                                                <span class="d-block h6 text-sm mb-0">Media</span>
-                                                <p class="mb-0 text-sm">190 files</p>
-                                            </div>
-                                            <div class="col-auto text-right"><a href=# class="h6 text-sm">10 GB</a>
-                                            </div>
-                                        </div>
-                                        <div class="row align-items-center">
-                                            <div class=col-auto>
-                                                <div class="icon icon-shape bg-soft-primary text-primary"><i
-                                                        class="fas fa-question"></i></div>
-                                            </div>
-                                            <div class="col pl-0">
-                                                <span class="d-block h6 text-sm mb-0">Misc</span>
-                                                <p class="mb-0 text-sm">376 files</p>
-                                            </div>
-                                            <div class="col-auto text-right"><a href=# class="h6 text-sm">3 GB</a></div>
-                                        </div>
+    <div class="modal fade fixed-right" id=modal-profile tabindex=-1 role=dialog aria-hidden=true>
+        <div class="modal-dialog modal-vertical" role=document>
+            <div class=modal-content>
+                <div class=modal-body>
+                    <div><button type=button class=close data-dismiss=modal aria-label=Close><span
+                                aria-hidden=true>&times;</span></button></div>
+                    <div class=px-4>
+                        <div class="d-flex my-4">
+                            <div class="avatar-parent-child mx-auto"><img alt="Image placeholder"
+                                    src="../assets/img/svg/icons/User_male.svg" class="avatar avatar-xl rounded-circle">
+                                <span class="avatar-child avatar-badge bg-success"></span></div>
+                        </div>
+                        <div class="text-center mb-4">
+                            <h6 class="h5 mb-0">User Name</h6>
+                            <span class="d-block text-muted">Useremail@gmail.com</span>
+                        </div>
+                        <div class="d-flex mb-5">
+                            <div class="col-4 text-center"><a href=#
+                                    class="h5 font-weight-bolder text-warning mb-0">5</a> <span
+                                    class="d-block text-sm">Borrowed</span></div>
+                            <div class="col-4 text-center"><a href=#
+                                    class="h5 font-weight-bolder text-warning mb-0">3</a> <span
+                                    class="d-block text-sm">Purchased</span></div>
+                            <div class="col-4 text-center"><a href=#
+                                    class="h5 font-weight-bolder text-warning mb-0">20</a> <span
+                                    class="d-block text-sm">Points</span></div>
+                        </div>
+                        <div class=mb-5>
+                            <div class="mt-4 pt-4 border-top">
+                                <div class="row align-items-center mb-3">
+                                    <div class=col-auto>
+                                        <div class="icon icon-shape bg-soft-warning text-warning"><i
+                                                class="fas fa-image"></i></div>
+                                    </div>
+                                    <div class="col pl-0">
+                                        <span class="d-block h6 text-sm mb-0">Images</span>
+                                        <p class="mb-0 text-sm">2580 files</p>
+                                    </div>
+                                    <div class="col-auto text-right"><a href=# class="h6 text-sm">18 GB</a>
                                     </div>
                                 </div>
-                                <div class="card shadow-none border-0 bg-section-secondary mt-8">
-                                    <div class="card-body pt-0 px-3 text-center">
-                                        <div class="pb-4 px-5 mt-n6"><img
-                                                src="../../libs/assets/img/svg/illustrations/illustration-15.svg"
-                                                class="img-fluid img-center" alt=Illustration></div>
-                                        <h5 class="h5 mb-3">Upgrade to Pro</h5>
-                                        <p class=text-muted>One year support, montlhy updates for up to 5 team members.
-                                        </p>
-                                        <a href=# class="btn btn-sm btn-primary">Upgrade</a>
+                                <div class="row align-items-center mb-3">
+                                    <div class=col-auto>
+                                        <div class="icon icon-shape bg-soft-success text-success"><i
+                                                class="fas fa-file-alt"></i></div>
                                     </div>
+                                    <div class="col pl-0">
+                                        <span class="d-block h6 text-sm mb-0">Documents</span>
+                                        <p class="mb-0 text-sm">375 files</p>
+                                    </div>
+                                    <div class="col-auto text-right"><a href=# class="h6 text-sm">5 GB</a></div>
+                                </div>
+                                <div class="row align-items-center mb-3">
+                                    <div class=col-auto>
+                                        <div class="icon icon-shape bg-soft-danger text-danger"><i
+                                                class="fas fa-video"></i></div>
+                                    </div>
+                                    <div class="col pl-0">
+                                        <span class="d-block h6 text-sm mb-0">Media</span>
+                                        <p class="mb-0 text-sm">190 files</p>
+                                    </div>
+                                    <div class="col-auto text-right"><a href=# class="h6 text-sm">10 GB</a>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class=col-auto>
+                                        <div class="icon icon-shape bg-soft-primary text-primary"><i
+                                                class="fas fa-question"></i></div>
+                                    </div>
+                                    <div class="col pl-0">
+                                        <span class="d-block h6 text-sm mb-0">Misc</span>
+                                        <p class="mb-0 text-sm">376 files</p>
+                                    </div>
+                                    <div class="col-auto text-right"><a href=# class="h6 text-sm">3 GB</a></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer py-3 mt-auto"><a href=#
-                                class="btn btn-block btn-sm btn-neutral btn-icon rounded-pill"><span
-                                    class=btn-inner--icon><i data-feather=log-out></i></span> <span
-                                    class=btn-inner--text>Sign out</span></a></div>
+                        <div class="card shadow-none border-0 bg-section-secondary mt-8">
+                            <div class="card-body pt-0 px-3 text-center">
+                                <div class="pb-4 px-5 mt-n6"><img
+                                        src="../../libs/assets/img/svg/illustrations/illustration-15.svg"
+                                        class="img-fluid img-center" alt=Illustration></div>
+                                <h5 class="h5 mb-3">Upgrade to Pro</h5>
+                                <p class=text-muted>One year support, montlhy updates for up to 5 team members.
+                                </p>
+                                <a href=# class="btn btn-sm btn-primary">Upgrade</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="modal-footer py-3 mt-auto"><a href=#
+                        class="btn btn-block btn-sm btn-neutral btn-icon rounded-pill"><span class=btn-inner--icon><i
+                                data-feather=log-out></i></span> <span class=btn-inner--text>Sign out</span></a></div>
             </div>
-            <header class="" id=header-main>
+        </div>
+    </div>
+    <header class="" id=header-main>
 
-            <nav class="navbar navbar-main navbar-expand-lg shadow navbar-light" id=navbar-main>
+        <nav class="navbar navbar-main navbar-expand-lg shadow navbar-light" id=navbar-main>
 
             <div class="container-fluid">
 
@@ -226,7 +225,7 @@ include "connection.php";
                 </div>
             </div>
         </nav>
-            </header>
+    </header>
     <section class="slice slice-lg py-7 py-lg-8 bg-cover bg-size--cover"
         style="background-image:url('../../libs/assets/img/backgrounds/p3.jpg')"> <span
             class="mask bg-dark opacity-9"></span>
@@ -277,8 +276,8 @@ include "connection.php";
                         <div class="table-responsive">
                             <table class="table text-center">
                                 <thead class="thead-dark">
-                                    
-                                <?php
+
+                                    <?php
 
 if(isset($_POST['submit']))
 {
@@ -291,15 +290,17 @@ if(isset($_POST['submit']))
     else
     {
 echo "<table class='table table-bordered table-hover' >";
-    echo "<tr style='background-color: #6db6b9e6;'>";
+echo "<thead class='thead-dark'>";
+    echo "<tr>";
         //Table header
         echo "<th>"; echo "ID";	echo "</th>";
         echo "<th>"; echo "Book-Name";  echo "</th>";
         echo "<th>"; echo "Authors Name";  echo "</th>";
         echo "<th>"; echo "Publisher";  echo "</th>";
         echo "<th>"; echo "Quantity";  echo "</th>";
-        
+       
     echo "</tr>";	
+    echo "</thead>";
 
     while($row=mysqli_fetch_assoc($q))
     {
@@ -322,8 +323,9 @@ else
     $res=mysqli_query($db,"SELECT * FROM `books` ORDER BY `books`.`bookname` ASC;");
 
 echo "<table class='table table-bordered table-hover' >";
-    echo "<tr style='background-color: #6db6b9e6;'>";
-        //Table header
+echo "<thead class='thead-dark'>";
+    echo "<tr>";
+        
         echo "<th>"; echo "ID";	echo "</th>";
         echo "<th>"; echo "Book-Name";  echo "</th>";
         echo "<th>"; echo "Authors Name";  echo "</th>";
@@ -332,6 +334,7 @@ echo "<table class='table table-bordered table-hover' >";
         
     
     echo "</tr>";	
+    echo "</thead>";
 
     while($row=mysqli_fetch_assoc($res))
     {
@@ -354,18 +357,18 @@ if(isset($_POST['submit1']))
     {
         mysqli_query($db,"INSERT INTO issue_book Values('$_SESSION[login_user]', '$_POST[bookid]', '', '', '');");
         ?>
-            <script type="text/javascript">
-                window.location="request.php"
-            </script>
-        <?php
+                                    <script type="text/javascript">
+                                        window.location = "request.php"
+                                    </script>
+                                    <?php
     }
     else
     {
         ?>
-            <script type="text/javascript">
-                alert("You must login to Request a book");
-            </script>
-        <?php
+                                    <script type="text/javascript">
+                                        alert("You must login to Request a book");
+                                    </script>
+                                    <?php
     }
 }
 
@@ -378,46 +381,45 @@ if(isset($_POST['submit1']))
         </div>
     </section>
 
-    
+
 
 
 
 
 
     <footer class=position-relative id=footer-main>
-                <div class="footer footer-dark bg-dark">
-                    <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
-                        <svg width=2560px height=100px xmlns=http://www.w3.org/2000/svg
-                            xmlns:xlink=http://www.w3.org/1999/xlink preserveAspectRatio=none x=0px y=0px
-                            viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100" xml:space=preserve
-                            class=fill-section-secondary>
-                            <polygon points="2560 0 2560 100 0 100"></polygon>
-                        </svg>
-                    </div>
-                    <hr class="divider divider-fade divider-dark">
-                    <div class="container">
-                        <div class="row justify-content-center pb-3">
-                            <div class="copyright text-sm font-weight-bold text-center">&copy; 2020 <a
-                                    class=font-weight-bold target=_blank>Libs.</a> All
-                                rights reserved
-                            </div>
-                        </div>
+        <div class="footer footer-dark bg-dark">
+            <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+                <svg width=2560px height=100px xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink
+                    preserveAspectRatio=none x=0px y=0px viewBox="0 0 2560 100"
+                    style="enable-background:new 0 0 2560 100" xml:space=preserve class=fill-section-secondary>
+                    <polygon points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+            <hr class="divider divider-fade divider-dark">
+            <div class="container">
+                <div class="row justify-content-center pb-3">
+                    <div class="copyright text-sm font-weight-bold text-center">&copy; 2020 <a class=font-weight-bold
+                            target=_blank>Libs.</a> All
+                        rights reserved
                     </div>
                 </div>
-                </div>
-            </footer>
+            </div>
+        </div>
+        </div>
+    </footer>
 
-            <script src="../../libs/assets/libs/jquery/dist/jquery.min.js"> </script>
-            <script src="../../libs/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script>
-            <script src="../../libs/assets/libs/feather-icons/dist/feather.min.js"> </script>
-            <script src="../../libs/assets/libs/fancyapps/jquery.fancybox.min.js"> </script>
-            <script src="../../libs/assets/js/main.js"> </script>
-            <script>
-                feather.replace({
-                    width: "1em",
-                    height: "1em"
-                })
-            </script>
+    <script src="../../libs/assets/libs/jquery/dist/jquery.min.js"> </script>
+    <script src="../../libs/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script>
+    <script src="../../libs/assets/libs/feather-icons/dist/feather.min.js"> </script>
+    <script src="../../libs/assets/libs/fancyapps/jquery.fancybox.min.js"> </script>
+    <script src="../../libs/assets/js/main.js"> </script>
+    <script>
+        feather.replace({
+            width: "1em",
+            height: "1em"
+        })
+    </script>
 </body>
 
 </html>
