@@ -1,8 +1,7 @@
 <?php
     include "connection.php";
+    session_start();
 ?>
-
-
 <!DOCTYPE html>
 <html lang=en>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -111,7 +110,8 @@
       }
       else
       {
-      
+      $_SESSION['login_user'] = $_POST['name'];
+
         ?>
           <script type="text/javascript">
             window.location="index.php"
