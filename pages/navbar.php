@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
         <html lang=en>
@@ -149,10 +151,8 @@
                                 if(isset($_SESSION['login_user']))
                               {?> 
                               <ul class ="nav navbar-nav">
-                                <li><a href="student.php">
-
-                                    STUDENT-INFORMATION
-                                    </a></li>
+                                <li><a href="profile.php"> PROFILE </a></li>
+                                 <li><a href="s_register.php">STUDENT INFORMATION </a></li>   
                                     </ul>
 
                             <div class="order-lg-2 ml-lg-3">

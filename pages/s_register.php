@@ -132,7 +132,7 @@
 
         if($count==0)
         {
-          mysqli_query($db,"INSERT INTO `s_register` VALUES('$_POST[name]', '$_POST[mobile]', '$_POST[email]', '$_POST[password]');");
+          mysqli_query($db,"INSERT INTO `s_register` VALUES('$_POST[name]', '$_POST[mobile]', '$_POST[email]', '$_POST[password]', 'profile.jpg');");
 
 
         ?>

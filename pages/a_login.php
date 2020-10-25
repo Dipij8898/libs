@@ -100,6 +100,8 @@ if(isset($_POST['submit']))
   }
   else
   {
+      $_SESSION['login_user'] = $_POST['name'];
+      $_SESSION['pic'] = $row['pic'];
   
     ?>
       <script type="text/javascript">
