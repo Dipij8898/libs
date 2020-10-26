@@ -2,6 +2,7 @@
         include "connection.php";
         session_start();
         include "navbar.php";
+
         ?>
             <section class="slice py-5">
                 <div class="container">
