@@ -69,7 +69,7 @@
                                                 data-feather=key></i></span></div>
                                 </div>
                                 <div class="text-right">
-                                    <a href="/pages/recover.html" class="small font-weight-bold">forgot password ?</a>
+                                    <a href="/pages/s_updatepass.php" class="small font-weight-bold">forgot password ?</a>
                                 </div>
                             </div>
 
