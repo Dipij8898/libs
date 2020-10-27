@@ -142,7 +142,9 @@ if(isset($_POST['submit']))
 
 
   ?>
-    
+  <script type="text/javascript">
+  alert("registration successfull");
+  </script>   
     <?php
   echo "<script> location.href='a_login.php'; </script>";
   exit;
