@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -144,6 +144,8 @@ session_start();
                                 </li>
                                 <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                         href="../../libs/pages/admin.php">Admin</a></li>
+                                <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                                href="../../libs/pages/b_request.php">Requests</a></li>
                             </ul>
 
                             <!-- before login start-->
