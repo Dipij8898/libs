@@ -135,11 +135,9 @@ if(isset($_POST['submit']))
     }
   }
 
-
   if($count==0)
   {
  mysqli_query($db,"INSERT INTO `a_register` VALUES('$_POST[name]', '$_POST[mobile]', '$_POST[email]', '$_POST[password]');");
-
 
   ?>
   <script type="text/javascript">

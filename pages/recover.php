@@ -36,7 +36,7 @@
                               </div>
                               <div class=mt-4><button type=submit class="btn btn-block btn-primary">Reset password</button></div>
                            </form>
-                           <div class="mt-4 text-center"><small>Haven't got OTP?</small> <a href="#" class="small font-weight-bold">Resend OTP</a></div>
+                           <div class="mt-4 text-center"><small>Haven't got OTP?</small> <a href="#" class="small font-weight-bold">Resend link</a></div>
                         </div>
                      </div>
                   </div>

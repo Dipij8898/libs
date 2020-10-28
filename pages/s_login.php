@@ -1,6 +1,7 @@
 <?php
     include "connection.php";
-    session_start();
+    include "navbar.php";
+   
 ?>
 <!DOCTYPE html>
 <html lang=en>
@@ -29,11 +30,6 @@
                             <p class="h1 mb-1">Student Login</p>
                             <p class="text-muted mb-0">Sign in to your account to continue.</p>
                         </div><span class=clearfix></span>
-
-                        
-
-
-                        
                         <form name="login" action="" method="post">
                             <div class=form-group><label class=form-control-label >Email</label>
                                 <div class="input-group input-group-merge">
@@ -52,15 +48,12 @@
                                         <label class=form-control-label name="pass">Password</label>
                                     </div>
                                     <div class=mb-2>
-
-
                                         <a href=# class="small text-muted text-underline--dashed border-primary"
                                             data-toggle=password-text data-target=#input-password >Show password
                                         </a>
                                     </div>
                                 </div>
                                 <div class="input-group input-group-merge">
-
                                     <input type=password
                                         class="form-control form-control-prepend" id=input-password
                                         placeholder=Password name="password">
@@ -69,11 +62,9 @@
                                                 data-feather=key></i></span></div>
                                 </div>
                                 <div class="text-right">
-                                    <a href="/pages/s_updatepass.php" class="small font-weight-bold">forgot password ?</a>
+                                    <a href="recover.php" class="small font-weight-bold">forgot password ?</a>
                                 </div>
                             </div>
-
-
                  <div class=mt-4><button type=submit class="btn btn-block btn-primary" name="submit">Sign in</button>
                             </div>
 
@@ -104,14 +95,14 @@
       {
         ?>
             <script type="text/javascript">
-           alert("not match");
+           alert("password doesnt match");
           </script>
         <?php
       }
       else
       {
-      $_SESSION['login_user'] = $_POST['name'];
-      $_SESSION['pic'] = $row['pic'];
+      $_SESSION['username'] = $_POST['name'];
+      $_SESSION['login_user'] = $_POST['email'];
 
         ?>
           <script type="text/javascript">
@@ -120,11 +111,7 @@
         <?php
       }
     }
-
   ?>
-
-
-
 <script src="../../libs/assets/libs/jquery/dist/jquery.min.js"> </script> <script
         src="../../libs/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script> <script
         src="../../libs/assets/libs/feather-icons/dist/feather.min.js"> </script> <script

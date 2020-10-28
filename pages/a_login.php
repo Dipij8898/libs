@@ -1,7 +1,7 @@
 <?php
     include "connection.php";
+    session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang=en>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -63,7 +63,7 @@
                                                 data-feather=key></i></span></div>
                                 </div>
                                 <div class="text-right">
-                                    <a href="/pages/recover.php" class="small font-weight-bold">forgot password ?</a>
+                                    <a href="recover.php" class="small font-weight-bold">forgot password ?</a>
                                 </div>
                             </div>
                             <div class=mt-4><button type=submit class="btn btn-block btn-primary" name="submit">Sign in</button>
@@ -100,8 +100,8 @@ if(isset($_POST['submit']))
   }
   else
   {
-      $_SESSION['login_user'] = $_POST['name'];
-      $_SESSION['pic'] = $row['pic'];
+      $_SESSION['username'] = $_POST['name'];
+      $_SESSION['login_user'] = $_POST['email'];
   
     ?>
       <script type="text/javascript">

@@ -1,9 +1,8 @@
         <?php
         include "connection.php";
-        session_start();
         include "navbar.php";
-
         ?>
+        
             <section class="slice py-5">
                 <div class="container">
                     <div class="row row-grid align-items-center">
@@ -139,11 +138,11 @@
                 </div>
             </footer>
 
-            <script src="../../libs/assets/libs/jquery/dist/jquery.min.js"> </script>
-            <script src="../../libs/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script>
-            <script src="../../libs/assets/libs/feather-icons/dist/feather.min.js"> </script>
-            <script src="../../libs/assets/libs/fancyapps/jquery.fancybox.min.js"> </script>
-            <script src="../../libs/assets/js/main.js"> </script>
+            <script src="../../../libs/assets/libs/jquery/dist/jquery.min.js"> </script>
+            <script src="../../../libs/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"> </script>
+            <script src="../../../libs/assets/libs/feather-icons/dist/feather.min.js"> </script>
+            <script src="../../../libs/assets/libs/fancyapps/jquery.fancybox.min.js"> </script>
+            <script src="../../../libs/assets/js/main.js"> </script>
             <script>
                 feather.replace({
                     width: "1em",

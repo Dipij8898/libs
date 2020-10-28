@@ -64,4 +64,5 @@ background-repeat: no-repeat;
            }
        }
     ?>
-    </body></html>
+    </body>
+    </html>

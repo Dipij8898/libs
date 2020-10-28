@@ -74,16 +74,6 @@ echo"</tr>";
 
 echo"<tr>";
     echo "<td>";
-    echo "<b> password: </b>";
-    echo "</td>";
-
-    echo "<td>";
-    echo $row['password'];
-    echo "</td>";
-echo"</tr>";
-
-echo"<tr>";
-    echo "<td>";
     echo "<b> profile pic: </b>";
     echo "</td>";
 
