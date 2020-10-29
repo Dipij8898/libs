@@ -11,7 +11,7 @@ include "navbar.php";
         <div class="container pt-xl-4">
             <div class="row justify-content-center">
                 <div class=col-lg-9>
-                    <h2 class="mb-4 text-center text-white">requests</h2>
+                    <h2 class="mb-4 text-center text-white">Requests</h2>
 
                 </div>
 
@@ -43,7 +43,7 @@ include "navbar.php";
 <?php                                
 if(isset($_SESSION['login_user']))
 {
-    $q=mysqli_query($db,"SELECT * from record where name='$_SESSION[login_user]'; ");
+    $q=mysqli_query($db,"SELECT * from issue_book where email='$_SESSION[login_user]'; ");
 
     if(mysqli_num_rows($q)==0)
     {
@@ -66,72 +66,20 @@ echo "<thead class='thead-dark'>";
     while($row=mysqli_fetch_assoc($q))
     {
         echo "<tr>";
-        echo "<td>"; echo $row['bookid']; echo "</td>";
-        echo "<td>"; echo $row['bookname']; echo "</td>";
-        echo "<td>"; echo $row['author']; echo "</td>";
-        echo "<td>"; echo $row['publisher']; echo "</td>";
-        
-
-        echo "</tr>";
-    }
-echo "</table>";
-    }
-}
-    /*if button is not pressed.*/
-else
-{
-    $res=mysqli_query($db,"SELECT * FROM `books` ORDER BY `books`.`bookname` ASC;");
-
-echo "<table class='table table-bordered table-hover' >";
-echo "<thead class='thead-dark'>";
-    echo "<tr>";
-        
-    echo "<th>"; echo "Book ID";	echo "</th>";
-    echo "<th>"; echo "Approve Status";  echo "</th>";
-    echo "<th>"; echo "Issue date";  echo "</th>";
-    echo "<th>"; echo "Return date";  echo "</th>";
-        
-    
-    echo "</tr>";	
-    echo "</thead>";
-
-    while($row=mysqli_fetch_assoc($res))
-    {
-        echo "<tr>";
-        echo "<td>"; echo $row['bookid']; echo "</td>";
+        echo "<td>"; echo $row['bid']; echo "</td>";
         echo "<td>"; echo $row['approve']; echo "</td>";
         echo "<td>"; echo $row['issue']; echo "</td>";
-        echo "<td>"; echo $row['return']; echo "</td>";
+        echo "<td>"; echo $row['returns']; echo "</td>";
         
 
         echo "</tr>";
     }
 echo "</table>";
+    }
 }
-
-
-
-if(isset($_POST['submit1']))
-{
-    if(isset($_SESSION['login_user']))
-    {
-        mysqli_query($db,"INSERT INTO record Values('$_SESSION[s_name]', '$_POST[bookid]', '', '', '');");
-                                ?>
-                                <script type="text/javascript">
-                                    window.location = "request.php"
-                                </script>
-                                <?php
-                                }
-                                else
-                                {
-                                ?>
-                                
-                                <script type="text/javascript">
-                                    alert("You must login to Request a book");
-                                </script>
-                                <?php
-                                }
-                                }
+else{
+    echo "please login first to see the book requests";
+}
 
                                 ?>
                         </table>

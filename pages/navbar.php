@@ -149,8 +149,34 @@ $q=mysqli_query($db,"SELECT * FROM s_register where name='$_SESSION[login_user]'
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                 href="../../libs/pages/index.php">Home </a></li>
 
-                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
-                                href="../../libs/pages/books.php">Books</a></li>
+                                <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
+                        <a class=nav-link href=# role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>Books</a>
+                        <div class="dropdown-menu dropdown-menu-md p-0">
+                           <ul class="list-group list-group-flush px-lg-4">
+                                 <a href="../../libs/pages/books.php" class="list-group-item list-group-item-action" >
+                                    <div class=d-flex>
+                                       <div class=ml-3>
+                                          <h6 class="heading mb-0">All Book</h6>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <a href="../../libs/pages/b_request.php" class="list-group-item list-group-item-action" >
+                                    <div class=d-flex>
+                                       <div class=ml-3>
+                                          <h6 class="heading mb-0">Book request</h6>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <a href="#" class="list-group-item list-group-item-action" >
+                                    <div class=d-flex>
+                                       <div class=ml-3>
+                                          <h6 class="heading mb-0">Issue Information</h6>
+                                       </div>
+                                    </div>
+                                 </a>
+                           </ul>
+                        </div>
+                     </li>
                         <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
                                 href="../../libs/pages/record.php">Record</a>
                         </li>
@@ -176,7 +202,7 @@ $q=mysqli_query($db,"SELECT * FROM s_register where name='$_SESSION[login_user]'
                                        </div>
                                     </div>
                                  </a>
-                                 <a href="../../libs/pages/b_request.php" class="list-group-item list-group-item-action" >
+                                 <a href="../../libs/pages/admin_request.php" class="list-group-item list-group-item-action" >
                                     <div class=d-flex>
                                        <div class=ml-3>
                                           <h6 class="heading mb-0">Requested books</h6>
