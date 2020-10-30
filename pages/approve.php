@@ -57,6 +57,30 @@ include "navbar.php";
             <path d="M 0 0 c 0 0 200 50 500 50 s 500 -50 500 -50 v 101 h -1000 v -100 z"></path>
         </svg>
     </div>
+       <?php
+
+       if (isset($_POST['submit']))
+       {
+           mysqli_query($db,"UPDATE `issue_book` SET `approve` = '$_POST[approve]',`issue` = '$_POST[issue]',`returns` = '$_POST[returns]' WHERE email='$_SESSION[email]' and bid='$_SESSION[bid]';");
+           mysqli_query($db,"UPDATE books SET quantity=quantity-1 where bookid='$_SESSION[bookid]';");
+
+           $res=mysqli_query($db,"SELECT quantity from books where bookid='$_SESSION[bookid]';");
+
+           while($row=mysqli_fetch_assoc($res))
+             {
+                 if($row['quantity']==0)
+                 {
+                     mysqli_query($db,"UPDATE books SET status='not-available' where bookid='$_SESSION[bookid]';");
+                 }
+             }
+           ?>
+               <script type="text/javascript">
+                 alert("Updated successfully.");
+                 window.location="admin_request.php"
+                 </script>
+              <?php
+               }
+               ?>
 </section>
 </body>
 </html>
