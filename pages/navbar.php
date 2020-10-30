@@ -119,7 +119,7 @@ $q=mysqli_query($db,"SELECT * FROM s_register where name='$_SESSION[login_user]'
                                 <h5 class="h5 mb-3">Upgrade to Pro</h5>
                                 <p class=text-muted>One year support, montlhy updates for up to 5 team members.
                                 </p>
-                                <a href=# class="btn btn-sm btn-primary">Upgrade</a>
+                                <a href="../../libs/pages/edit.php" class="btn btn-sm btn-primary">Edit</a>
                             </div>
                         </div>
                     </div>
